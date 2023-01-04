@@ -10,6 +10,4 @@ export class Empleado{
         this.cargo = cargo;
         this.salario = salario;
     }
-
-
 }
