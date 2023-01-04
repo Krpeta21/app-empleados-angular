@@ -12,6 +12,7 @@ export class EmpleadoHijoCComponent {
   
   arrayCaracteristicas =[''];
   agregarCaracteristica(nuevaCaracteristica:string){
+    
     this.arrayCaracteristicas.push(nuevaCaracteristica)
   }
   eliminarCaracteristica(){
