@@ -3,9 +3,17 @@
     <div class="row">
         <div class="col">            
                 <div>
-                    {{indice+1}} {{empleadoDeLista.nombre}}  {{empleadoDeLista.apellido}} {{empleadoDeLista.cargo}} {{empleadoDeLista.salario}} usd
+                    
+                        {{indice+1}} {{empleadoDeLista.nombre}}  {{empleadoDeLista.apellido}} {{empleadoDeLista.cargo}} {{empleadoDeLista.salario}} usd
+                        <a style="text-decoration: none;" [routerLink]="['/actualiza',indice]" [queryParams]="{accion:'1'}">
+                            Editar
+                        </a>
+                        
+                        <a style="text-decoration: none; color: red;" [routerLink]="['/actualiza',indice]" [queryParams]="{accion:'2'}">
+                            Eliminar
+                        </a>
                 </div>                      
-                
+            
                 <ul>
                     <li style="list-style: none;" *ngFor="let caracteristica of arrayCaracteristicas">{{caracteristica}}</li>
                 </ul>

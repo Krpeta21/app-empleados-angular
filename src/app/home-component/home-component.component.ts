@@ -24,9 +24,7 @@ export class HomeComponentComponent {
       
       this.empleadosService.agregarEmpleado(miEmpleado);
     }
-  eliminarEmpleado(){
-    this.empleadosService.eliminarEmpleado();
-  }
+    
     
     cuadroNombre:string ="";
     cuadroApellido:string ="";

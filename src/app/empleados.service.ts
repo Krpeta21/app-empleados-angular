@@ -18,8 +18,19 @@ export class EmpleadosService{
       agregarEmpleado(empleado: Empleado){
         this.servicioVentanaEmergente.muestraMensaje("Persona a agregar: \n" + empleado.nombre+ "\n" + empleado.salario)
         this.empleados.push(empleado);
+      }      
+      encontrarEmpleado(indice: number){
+        return this.empleados[indice];         
       }
-      eliminarEmpleado(){
-        this.empleados.pop();
+
+      actualizarEmpleado(indice:number, empleado:Empleado){
+        let empleadoModificado = this.empleados[indice];
+        empleadoModificado.nombre = empleado.nombre;
+        empleadoModificado.apellido = empleado.apellido;
+        empleadoModificado.cargo = empleado.cargo;
+        empleadoModificado.salario = empleado.salario;
+      }
+      eliminarEmpleado(indice:number){
+        this.empleados.splice(indice,1);
       }
 }
