@@ -26,6 +26,7 @@ constructor(private route:ActivatedRoute,private router: Router,private miServic
   }
   volverHome(){
     this.router.navigate([""]);
+    
   }
   // modificarEmpleado(){
       
@@ -43,10 +44,15 @@ constructor(private route:ActivatedRoute,private router: Router,private miServic
     if(this.accion == 1){  
     let miEmpleado = new Empleado(this.cuadroNombre,this.cuadroApellido,this.cuadroCargo,this.cuadroSalario);
     this.empleadosService.actualizarEmpleado(this.indice,miEmpleado);
-    this.router.navigate([""]);
+    this.router.navigate([""]).then(() => {
+      alert("Se ha modificado el empleado.")
+    });    
     }else{
     this.empleadosService.eliminarEmpleado(this.indice);
-    this.router.navigate([""]);
+    this.router.navigate([""]).then(() => {
+      alert("Se ha eliminado el empleado.")
+    });    
+    
     }
   }
   cuadroNombre:string = "";

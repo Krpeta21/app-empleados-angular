@@ -10,5 +10,8 @@ export class ServicioEmpleadosService {
   muestraMensaje(mensaje: string){
     alert(mensaje);
   }
+  recargarPagina(){
+    window.location.reload();
+  }
 
 }
